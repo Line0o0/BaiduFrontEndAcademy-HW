@@ -1,0 +1,107 @@
+body{
+    line-height: 1.5;
+    background-image: url(pictures/bz.jpg);
+    background-repeat: no-repeat;
+    /* background-position: 100px 100px; */
+    background-size: cover;
+    
+}
+.title{
+    font-family: Monospace;
+    text-align: center;
+    font-size: 2.5rem;
+    font-style: normal;
+    /* font-weight: 900; 不起作用？*/
+    text-shadow: 4px 4px 5px black;
+}
+
+
+div
+{
+    padding-left: 20px;
+}
+p
+{
+    text-indent: 2rem;
+}
+
+h3
+{
+    /* background-color:rgb(230, 230, 230); */
+    padding: 10px;
+    /* border:solid;
+    border-width: 2px;
+    border-color: burlywood;
+    border-radius: 10% 30% 30% 10%; */
+}
+
+/* 自定义列表 */
+dl{
+    padding-left: 2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-top: -10px;
+}
+dl dt{
+    font-weight: bold;
+}
+
+/* 下面两个样式为无序列表添加了一个星号标签 */
+ul{
+    font-weight: bold;
+    list-style-type: none;
+    font-size: 1rem;
+    padding-left: 2rem;  
+}
+
+ul li{
+    background-image: url(pictures/star.svg);
+    background-position: 0 0;
+    background-size: 1.1em 1.1em;
+    background-repeat: no-repeat;
+    padding-left: 1.5rem;
+    line-height: 1.5;
+    display: list-item;
+    
+}
+
+/* #contact
+{
+    text-decoration: none;
+} */
+
+a {
+    /* 取消文字被选中时候的轮廓 */
+    outline: none;
+    /* 下面取消了默认的下划线 */
+    text-decoration: none;
+    padding: 2px 1px 0;
+  }
+  
+  a:link {
+    /* 设置未访问时的样式 */
+    color: #265301;
+  }
+  
+  a:visited {
+    color: #437A16;
+  }
+  
+  /* 下面设置了在选中或者悬浮时才出现的下划线 */
+  a:focus {
+    border-bottom: 1px solid;
+    background: #BAE498;
+  }
+  
+  a:hover {
+    border-bottom: 1px solid;     
+    background: #CDFEAA;
+  }
+  
+  a:active {
+    background: #265301;
+    color: #CDFEAA;
+  }
+
+
+  
