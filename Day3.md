@@ -79,3 +79,10 @@ Box model:
 
 - 一般来说，可以为所有块级元素应用 text-indent，但无法将该属性应用于行内元素，图像之类的替换元素上也无法应用 text-indent 属性.
 - 如果想把一个行内元素的第一行“缩进”，可以用左内边距或外边距创造这种效果。
+
+text-decoration:
+
+- 用于设置文本的修饰线外观的
+- [`text-decoration-line`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-line)，[`text-decoration-color`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-color)和[`text-decoration-style`](https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration-style)三个的简写属性
+- 下划线、上划线、贯穿线/删除线 或 波浪线等待
+
