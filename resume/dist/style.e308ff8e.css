@@ -1,6 +1,6 @@
 body{
     line-height: 1.5;
-    background-image: url(../pictures/bz.jpg);
+    background-image: url(/bz.c68befa5.jpg);
     background-repeat: no-repeat;
     /* background-position: 100px 100px; */
     background-size: cover;
@@ -55,7 +55,7 @@ ul{
 }
 
 ul li{
-    background-image: url(../pictures/star.svg);
+    background-image: url(/star.d6da2bd0.svg);
     background-position: 0 0;
     background-size: 1.1em 1.1em;
     background-repeat: no-repeat;
@@ -105,3 +105,5 @@ a {
 
 
   
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
