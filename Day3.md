@@ -20,18 +20,7 @@
 
 
 
-Box model:
-
-- block --霸道、默认
-  - The box will extend in the inline direction to fill the space available in its container. In most cases this means that the box will become as wide as its container, filling up 100% of the space available.大多数时候会占据所有空间
-  - The box will break onto a new line.
-  - The [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) properties are respected.
-  - Padding, margin and border will cause other elements to be pushed away from the box被挤压
-- inline --内敛、局限于行内
-  - The box will not break onto a new line.
-  - The [`width`](https://developer.mozilla.org/en-US/docs/Web/CSS/width) and [`height`](https://developer.mozilla.org/en-US/docs/Web/CSS/height) properties will not apply.
-  - Padding, margin and borders will apply but will not cause other inline boxes to move away from the box.
-  - <a> element, used for links, <span>, <em> and <strong> are all examples of elements that will display inline by default.
+- - 
 
 
 
