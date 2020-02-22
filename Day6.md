@@ -1,4 +1,4 @@
-**Float：**（两份样例代码见[float文件夹](D:\ProgramCodes\BaiduFrontEndAcademy-HW\float)，代码中有很多可以学习的技巧，已做详细注释）
+**float：**（两份样例代码见[float文件夹](D:\ProgramCodes\BaiduFrontEndAcademy-HW\float)，代码中有很多可以学习的技巧，已做详细注释）
 
 - ```css
   img {
@@ -101,6 +101,10 @@
     }
     ```
 
+- 为什么页脚加margin-top一开始不管用？
+
+  While we can add a margin to the float to push the text away, we can't add a margin to the text to move it away from the float. This is because a floated element is taken out of normal flow, and the boxes of the following items actually run behind the float. 
+
 - 固定列的长度：
 
   ```
@@ -110,4 +114,4 @@
   }
   ```
 
-  
+- [other tricks about floats](https://css-tricks.com/all-about-floats/)
