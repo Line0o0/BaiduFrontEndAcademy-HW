@@ -86,3 +86,11 @@ Padding:
 
 - No negative.必须非负。
 - padding也会显示background
+
+
+
+margin:0 auto居中小技巧：
+
+- 设置对象上下间距为0，左右自动
+- 如果要让DIV布局居中浏览器中，加入margin:0 auto就不能加入[float](http://www.divcss5.com/rumen/r93.shtml)浮动样式，避免逻辑错误，造成布局既要向左或者向右float，又要居中，不兼容。
+- 考虑兼容需要对低版本IE比如IE6和对标准比较严格浏览器在`<body>`设置`text-align:center`。
