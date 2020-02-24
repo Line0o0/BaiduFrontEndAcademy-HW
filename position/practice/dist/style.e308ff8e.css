@@ -1,0 +1,84 @@
+html {
+    font-family: sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+.info-box {
+    width: 450px;
+    height: 400px;
+    position: fixed;
+    top: 0;
+}
+
+.info-box ul {
+    padding-left: 0;
+    margin-top: 0;
+}
+
+.info-box li {
+    /*使用这一招来使三个成一行 也可以用inline-block 
+    但是inline-box三个之间会出现间隙，但又不是margin，不知道是什么
+    使用float就不会，并且可以完美的充满整个空间不会有意外的东西*/
+    float: left;
+    list-style-type: none;
+    width: 150px;
+}
+
+.info-box li a {
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    line-height: 3;
+    background-color: red;
+    color: black;
+    text-align: center;
+}
+
+.info-box li a:focus, .info-box li a:hover {
+    background-color: #a60000;
+    color: white;
+}
+
+.info-box li a.active {
+    background-color: #eb7272;
+    color: white;
+}
+
+.info-box .panels {
+    height: 352px;
+    position: relative;
+    /*为后面元素设置absolute做铺垫*/
+    clear: both;
+}
+
+.info-box article {
+    position: absolute;
+    /*此时已经使三个tab位于不同层了，就是说他们不会一起显示了 */
+    top: 0;
+    left: 0;
+    height: 352px;
+    padding: 10px;
+    color: white;
+    background-color: #a60000;
+}
+
+.info-box .active-panel {
+    z-index: 1;
+}
+
+.fake-content {
+    background-color: #a60000;
+    color: white;
+    padding: 10px;
+    height: 2000px;
+    margin-left: 470px;
+  }
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */

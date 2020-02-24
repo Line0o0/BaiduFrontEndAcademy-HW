@@ -1,0 +1,40 @@
+body {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+p {
+    line-height: 2;
+    word-spacing: 0.1rem;
+}
+
+img {
+    /* border: 5px solid red;
+      padding-top: 30px; 
+       float: left;
+      margin-right: 30px; */
+    float: right;
+    margin-left: 100px;
+}
+
+.xiachen {
+    width: 400px;
+    margin: 0 auto;
+}
+
+/* 说明伪类选择器在类的用法不是这样的 */
+.xiachen::first-line {
+    text-transform: uppercase;
+}
+
+.xiachen::first-letter {
+    font-size: 3em;
+    border: 1px solid black;
+    background: red;
+    float: left;
+    padding: 2px;
+    margin-right: 4px;
+}
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */

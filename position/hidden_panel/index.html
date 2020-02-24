@@ -1,0 +1,75 @@
+<!-- 原文链接如下： -->
+<!-- https://developer.mozilla.org/zh-CN/docs/Learn/CSS/CSS_layout/Practical_positioning_examples -->
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+	<meta charset="utf-8">
+	<title>Hidden info panel</title>
+
+  <style>
+    /* || Checkbox hack to control information box display */
+
+    label[for="toggle"] {
+      font-size: 3rem;/*使图标更大更美观。*/
+      position: absolute;
+      top: 4px;
+      right: 5px;
+      z-index: 1;
+      /* 设置其 z-index 为1——因此当信息面板被赋予样式和显示的时候，不会覆盖我们的图标；相反图标依然会位于最上层能够再次被按下来隐藏信息平板。 */
+      cursor: pointer;
+      /* 使用 cursor 属性来改变鼠标的指针，当鼠标悬浮在图标上面的时候变成一个手形指针（就像你看到的当悬浮在链接上一样），作为一个额外的可视化线索告诉用户这个图标可以做一些有趣的事情。 */
+    }
+
+    input[type="checkbox"] {
+       position: absolute;
+       top: -100px;
+    }
+
+    /* information box styling */
+
+    aside {
+      background-color: #a60000;
+      color: white;
+
+      width: 340px;
+      height: 100%;
+      padding: 0 20px;
+
+      position: fixed;
+      top: 0;
+      right: -370px;
+
+      transition: 0.6s all;
+    }
+
+    /* Second part of the checkbox hack — the checked state */
+
+    input[type=checkbox]:checked + aside {
+      right: 0px;
+    }
+  </style>
+
+</head>
+<body>
+
+<!-- <label>元素普遍用来联系文字标签和表单，目的是能更好的理解表单（允许屏幕阅读器用户查看表单元素的描述）。这里通过for属性绑定id到了<input>标签的checkbox元素。 -->
+<!-- 另一个 <label> 标签有用的副作用使你能通过点击checkbox的label标签来选择这个checkbox，就好像点击了这个checkbox自己一样。这就会实现有名的 checkbox hack 技术，可以提供无 JavaScript 的方法来通过按钮来控制一个元素 -->
+    <label for="toggle">❔</label>
+  <input type="checkbox" id="toggle">
+  <aside>
+    <h2>Information</h2>
+
+    <p>Some very important information about your app:</p>
+
+    <ol>
+      <li>It has a really cool slide-out information box.</li>
+      <li>This information box uses a combination of fixed positioning and a CSS transition for the smooth sliding.</li>
+      <li>It also uses a cool technique called the <a href="https://css-tricks.com/the-checkbox-hack/">checkbox hack</a>.</li>
+      <li>This allows you to create a nice "toggle on/toggle off" UI effect without using any JavaScript, which will work in IE9 and above (the smooth transition will work in IE10 and above.)</li>
+
+    </ol>
+
+  </aside>
+</body>
+</html>

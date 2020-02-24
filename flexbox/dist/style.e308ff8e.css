@@ -1,0 +1,28 @@
+html {
+    font-family: sans-serif;
+  }
+
+  body {
+    width: 70%;
+    max-width: 960px;
+    margin: 20px auto;
+  }
+
+  button {
+    font-size: 18px;
+    line-height: 1.5;
+    width: 15%;
+  }
+
+  div {
+    height: 100px;
+    border: 1px solid black;
+  }
+
+  /* Add your flexbox CSS below here */
+  div {
+    display: flex;
+    justify-content: space-around;
+  }
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
