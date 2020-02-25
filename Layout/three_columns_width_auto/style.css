@@ -4,7 +4,10 @@ html, body {
 }
 
 
-/* First */
+/* First 绝对定位法*/
+/* 这里的左中右三个div的顺序是可以任意调整的 */
+/* 此方法的优点是，理解容易，上手简单，受内部元素影响而破坏布局的概率低，就是比较经得起折腾。
+缺点在于：如果中间栏含有最小宽度限制，或是含有宽度的内部元素，当浏览器宽度小到一定程度，会发生层重叠的情况。然而，一般情况下，除非用户显示器分辨率宽度>=1600像素，否则用户不会把浏览器缩小到1000像素以下的，所以该缺陷危害指数3. */
 #left1, #right1 {
     position: absolute;
     top: 0;
@@ -19,19 +22,22 @@ html, body {
 
 #right1 {
     right: 0;
-    background: #a0b3d6;
+    background: #1bcc91;
 }
 
 #main1 {
-    margin: 0 210px;
+    margin: 0 210px;/*垂直方向0，水平左右各210px*/
     background: #ffe6b8;
     height: 100%;
 }
 
 
 
-/* Second*/
 
+/* Second margin负值法*/
+/* 先是主体部分div，这是肯定的，至于左右两栏谁先谁后，都无所谓 */
+/* 此方法的优点：三栏相互关联，可谓真正意义上的自适应，有一定的抗性——布局不易受内部影响。
+缺点在于：相对比较难理解些，上手不容易，代码相对复杂。出现百分比宽度，过多的负值定位，如果出现布局的bug，排查不易。 */
 #main2 {
     width: 100%;
     height: 100%;
@@ -39,7 +45,7 @@ html, body {
 }
 
 #main2 #body2 {
-    margin: 0 210px;
+    margin: 0 210px;/*用maigin不能用padding*/
     background: #ffe6b8;
     height: 100%;
 }
@@ -48,20 +54,27 @@ html, body {
     width: 200px;
     height: 100%;
     float: left;
-    background: #a0b3d6;
+    
 }
 
 #left2 {
     margin-left: -100%;
+    background: #a0b3d6;
 }
+/* 把打书签的两行注释掉，就能理解为什么两个margin-left这么写了 */
 
 #right2 {
     margin-left: -200px;
+    background: #0ee9b9;
 }
 
 
 
 /* Third */
+/* 这里三个div标签的顺序的关键是要把主体div放在最后，左右两栏div顺序任意。
+
+此方法的优点是：代码足够简洁与高效
+不足在于：中间主体存在克星，clear:both属性。如果要使用此方法，需避免明显的clear样式。 */
 
 #main3 {
     height: 100%;
@@ -73,13 +86,15 @@ html, body {
 #right3 {
     width: 200px;
     height: 100%;
-    background: #a0b3d6;
+    
 }
 
 #left3 {
     float: left;
+    background: #a0b3d6;
 }
 
 #right3 {
     float: right;
+    background: #0ee9b9;
 }
