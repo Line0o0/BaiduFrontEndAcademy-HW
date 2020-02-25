@@ -1,4 +1,6 @@
-背景background设置：
+[TOC]
+
+#### 背景background设置：
 
 - 希望背景色从元素中的文本向外少有延伸，需要增加padding
 
@@ -26,7 +28,7 @@
   - `fixed` stays fixed no matter what. It's kind of like a physical window: moving around the window changes your perspective, but it doesn't change where things are outside of the window.
   - `local` was invented because the default `scroll` value acts like a fixed background. It scrolls both with the main view *and* the local view. There are some [pretty cool things](http://lea.verou.me/2012/04/background-attachment-local/) you can do with it.
 
-- background-size：
+- **background-size**：
 
   - contain：浏览器会将图像调整为合适的大小以适合框内。在这种情况下，如果图像的长宽比与盒子的长宽比不同，则最终可能会在图像的两侧或顶部和底部出现间隙，即框可能不能铺满。
   - cover：浏览器将使图像足够大，以使其完全覆盖方框区域，同时仍保留其宽高比。在这种情况下，某些图像可能会出现在盒子外面。即分为两步，首先调整大小使得和框的大小接近，但要稍大；然后再用图片把框铺满。
@@ -34,11 +36,11 @@
 
 
 
-border边框设置：
+#### border边框设置：
 
 - border-style
 
-  - 边框绘制在“元素的背景之上”。因为有些边框是“间断的”（例如，点线边框或虚线框），元素的背景应当出现在边框的可见部分之间。元素的背景是内容、内边距和边框区的背景。
+  - 边框绘制在“元素的背景之上”。因为有些边框是“间断的”（例如，点线边框或虚线框），元素的背景应当出现在边框的可见部分之间。**元素的背景是内容、内边距和边框区的背景。**
 
   - border-style:首先要设置这一项，边框才会显示。
 
@@ -79,7 +81,7 @@ border边框设置：
 
 
 
-CSS列表：
+#### CSS列表：
 
 - line-style-type:none;列表每一项的小标号样式
   - 罗马计数：lower-roman、upper-roman
@@ -87,7 +89,7 @@ CSS列表：
 
 
 
-链接样式：
+#### 链接样式：
 
 - 四种状态
 
@@ -156,7 +158,7 @@ a[href*="http"] {
 ```
 
 - 指定位置是 100% (background-position中的第一个参数：水平位置，另一个垂直位置没写默认是50%)使其出现在内容的右边，然后距离上方是 0 px
-- 在链接上设置 padding-right ，为背景图片留出空间，所以我们不会和文本重叠。
+- 在链接上设置 `padding-right`，为背景图片留出空间，所以我们不会和文本重叠。
 - 如何只选中了外部链接的？如果正确写了 [HTML links](https://developer.mozilla.org/zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks) ，就应该只会在外部链接上使用绝对 URL，如果链接是链接你的站点的其他部分，那么使用相对链接是更加高效的。因此 "http" 文本应该只出现在外部链接上。
 - 所以我们可以使用一个属性选择器 [attribute selector](https://developer.mozilla.org/zh-CN/Learn/CSS/Introduction_to_CSS/Selectors#Attribute_selectors): `a[href*="http"]` 选中 `a` 元素，但是只会选中那些拥有 `href` 属性，且属性的值包含 "http" 的`a`的元素。
 

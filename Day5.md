@@ -1,4 +1,17 @@
-Box model outer display:
+[TOC]
+
+
+
+##### Inner and outer display types:
+
+- *outer* display type, which details whether the box is block or inline.
+- *inner* display type, which dictates how elements **inside that box** are laid out.By default, the elements inside a box are laid out in **[normal flow](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)**, which means that they behave just like any other block and inline elements (as explained above).
+
+
+
+
+
+##### Box model outer display:
 
 - block --霸道、默认
   - The box will extend in the inline direction to fill the space available in its container. In most cases this means that the box will become as wide as its container, filling up 100% of the space available.大多数时候会占据所有空间
@@ -24,7 +37,7 @@ Box model outer display:
 
   - <img src="C:\Users\TDD35\AppData\Roaming\Typora\typora-user-images\image-20200222181132314.png" alt="image-20200222181132314" style="zoom:67%;" />
 
-  - 只有显式添加width和height属性时，它的大小才会大于其内容。？怎么理解
+  - 只有显式添加width和height属性时，它的大小才会大于其内容，不然就只是包住内容而已。
 
   - 后面两句话用inline，很明显这两句话不会专门另起一行。
 
@@ -36,27 +49,22 @@ Box model outer display:
   
     
 
-Inner and outer display types:
-
-- *outer* display type, which details whether the box is block or inline.
--  *inner* display type, which dictates how elements **inside that box** are laid out.By default, the elements inside a box are laid out in **[normal flow](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Normal_Flow)**, which means that they behave just like any other block and inline elements (as explained above).
 
 
-
-The standard CSS box model:
+##### The standard CSS box model:
 
 -  give a box a `width` and a `height` attribute, this defines the width and height of the **content box**.
 - Any padding and border is then added to that width and height to get the total size taken up by the box.
 
 
 
-The alternative CSS box model：
+##### The alternative CSS box model：
 
 - use `box-sizing: border-box; `改为alternative model，因为浏览器默认The standard model
 
 - width和height是整个box的尺寸，而非content box
 
-- want all of your elements to use the alternative box model,set the `box-sizing` property on the `<html>` element, then set all other elements to inherit that value.As belows:
+- want all of your elements to use the alternative box model,set the `box-sizing` property on the `<html>` element, then set all other elements to inherit that value. As below:
 
 - ```css
   html {
@@ -69,12 +77,12 @@ The alternative CSS box model：
 
 
 
-Margin:
+##### Margin:
 
 - pushes other elements away from the box.但也有可能会挤压box的大小。
 - Setting a negative margin on one side of your box can cause it to overlap other things on the page.
 
-Margin collapsing:
+###### Margin collapsing:
 
 - 两个正的margin相邻取较大值
 - 两个负的margin相邻取绝对值大的（反正就是要表现最大的变化）。
@@ -82,15 +90,16 @@ Margin collapsing:
 
 
 
-Padding:
+##### Padding:
 
 - No negative.必须非负。
 - padding也会显示background
 
 
 
-margin:0 auto居中小技巧：
+##### margin:0 auto居中小技巧：
 
 - 设置对象上下间距为0，左右自动
 - 如果要让DIV布局居中浏览器中，加入margin:0 auto就不能加入[float](http://www.divcss5.com/rumen/r93.shtml)浮动样式，避免逻辑错误，造成布局既要向左或者向右float，又要居中，不兼容。
 - 考虑兼容需要对低版本IE比如IE6和对标准比较严格浏览器在`<body>`设置`text-align:center`。
+
