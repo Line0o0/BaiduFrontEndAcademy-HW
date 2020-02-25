@@ -1,0 +1,85 @@
+html, body {
+    margin: 0;
+    height: 100%;
+}
+
+
+/* First */
+#left1, #right1 {
+    position: absolute;
+    top: 0;
+    width: 200px;
+    height: 100%;
+}
+
+#left1 {
+    left: 0;
+    background: #a0b3d6;
+}
+
+#right1 {
+    right: 0;
+    background: #a0b3d6;
+}
+
+#main1 {
+    margin: 0 210px;
+    background: #ffe6b8;
+    height: 100%;
+}
+
+
+
+/* Second*/
+
+#main2 {
+    width: 100%;
+    height: 100%;
+    float: left;
+}
+
+#main2 #body2 {
+    margin: 0 210px;
+    background: #ffe6b8;
+    height: 100%;
+}
+
+#left2, #right2 {
+    width: 200px;
+    height: 100%;
+    float: left;
+    background: #a0b3d6;
+}
+
+#left2 {
+    margin-left: -100%;
+}
+
+#right2 {
+    margin-left: -200px;
+}
+
+
+
+/* Third */
+
+#main3 {
+    height: 100%;
+    margin: 0 210px;
+    background: #ffe6b8;
+}
+
+#left3,
+#right3 {
+    width: 200px;
+    height: 100%;
+    background: #a0b3d6;
+}
+
+#left3 {
+    float: left;
+}
+
+#right3 {
+    float: right;
+}
