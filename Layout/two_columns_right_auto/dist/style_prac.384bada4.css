@@ -1,0 +1,136 @@
+.wrapper {
+    padding: 15px 20px;
+    border: 1px dashed #ff6c60;
+}
+
+.left {
+    width: 120px;
+    /* 已经固定好宽度*/
+    border: 5px solid #ddd;
+}
+
+.right {
+    margin-left: 20px;
+    border: 5px solid #ddd;
+}
+
+/* .block{
+    padding: 15px 20px;
+    border: 1px dashed #ff6c60;
+    margin-bottom: 20px;
+}
+
+.full{
+    border: 5px solid #ddd;
+} */
+
+
+
+/* 双inline-box */
+
+.wrapper-double-inline-block {
+    font-size: 0;
+    /* box-sizing: content-box; */
+}
+
+.wrapper-double-inline-block .right, 
+.wrapper-double-inline-block .left {
+    display: inline-block;
+    vertical-align: top;/* 含义是什么？加在子元素的？*/
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.wrapper-double-inline-block .right{
+    width: calc(100% - 140px);
+    /* 写成100%-140px就会失效 */
+}
+
+/* 双float */
+.wrapper-double-float{
+    overflow: auto;
+}
+
+.wrapper-double-float .right,
+.wrapper-double-float .left{
+    float:left;
+    box-sizing: border-box;
+}
+
+.wrapper-double-float .right{
+    width: calc(100% - 140px);
+}
+
+/* float+margin-left */
+.wrapper-float-margin-left{
+    overflow: auto;
+}
+
+
+.wrapper-float-margin-left .left{
+    float: left;
+
+}
+
+.wrapper-float-margin-left .right{
+    margin-left: 150px;
+    /* 利用了块级元素会自动填充父元素 */
+    /* 是会占满的，除非显式规定了宽高 */
+}
+
+/* absolute */
+.wrapper-absolute{
+    overflow: hidden;
+    /* overflow: hidden不起作用，能不能从BFC去解释 */
+    min-height: 200px;
+}
+
+.wrapper-absolute .left{
+    position: absolute;
+}
+
+.wrapper-absolute .right{
+    margin-left: 150px;
+}
+
+
+/* float+BFC */
+.wrapper-float-BFC{
+    overflow: auto;
+}
+
+.wrapper-float-BFC .left{
+    float: left; /* float其实是使其固定在左边 */
+    /* box-sizing: border-box; */
+    margin-right: 0px;
+
+}
+
+.wrapper-float-BFC .right{
+    margin-left: 30px;
+    overflow: hidden;   
+    /* box-sizing: border-box; */
+}
+
+
+/* flex */
+.wrapper-flex{
+    display: flex;
+    align-items: flex-start;
+}
+
+
+.wrapper-flex .left{
+    flex: 0 0 auto;
+}
+
+.wrapper-flex .right{
+    flex:1 1 auto;
+    
+}
+
+
+
+
+
+/*# sourceMappingURL=/style_prac.384bada4.css.map */
