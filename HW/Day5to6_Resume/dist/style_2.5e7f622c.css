@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    margin: 0;
+}
+
+.title {
+    box-sizing: border-box;
+    width: 200px;
+    height: 800px;
+    background: #65a5fa;
+    float: left;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    margin-top: 0;
+}
+
+.basis, .contact, .skill, .exper, .intro {
+    padding-top: 30px;
+    /* 换成maigin-top顶部会有白色间隙，为什么设置右边的也会导致左边float元素出现间隙？？ */
+}
+
+h3 {
+    padding-bottom: 10px;
+}
+
+.content {
+    margin-left: 220px;
+    width: 700px;
+}
+
+.contact ul li, .basis ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 25px;
+    margin-left: 0;
+}
+
+.skill ol {
+    padding-left: 20px;
+}
+
+.skill ol li {
+    list-style-type: "\1F44D";
+    line-height: 2;
+}
+
+.exper ul {
+    padding-left: 20px;
+}
+
+.exper ul li{
+    line-height: 1.5;
+}
+
+/*# sourceMappingURL=/style_2.5e7f622c.css.map */
