@@ -99,12 +99,13 @@
 
 .wrapper-float-bfc .left {
     float: left;/* 用float其实是使其固定在左边 */
-    margin-right: 20px;
+    margin-right: 20px;/*给float元素加margin是最简单的，若给right加需要很大的数值：即要150px*/
 }
 
 .wrapper-float-bfc .right {
     margin-left: 0;/* margin右边来设不起作用？*/
     overflow: auto;/*右边是一个独立的BFC,就不会受浮动影响了*/
+    /* margin-left: 150px; */
     /*flow-root?*/
 }
 
