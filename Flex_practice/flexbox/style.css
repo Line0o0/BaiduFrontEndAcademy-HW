@@ -1,0 +1,64 @@
+html {
+  font-family: sans-serif;
+}
+
+body {
+  /* width: 70%; */
+  max-width: 960px;
+  margin: 20px auto;
+  /* 居中*/
+}
+
+button {
+  font-size: 18px;
+  line-height: 1.5;
+  width: 15%;
+}
+
+.bar {
+  display: flex;
+  justify-content: space-around;
+  height: 100px;
+  border: 1px solid black;
+}
+
+
+/* 下面练习流式布局 */
+
+.flow-layout {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  /* width: 500px; */
+  height: 150px;
+  margin: 50px auto;
+}
+
+.block {
+  height: 50px;
+  /* flex:  240px; */
+ /* flex的第三个参数是至少应该给我这么多宽度，不够的话就会导致换行了 */
+ flex: 0 1 25%;/* 这里第一个参数必须为0，这样第五个block在下一行不会放大，第二个参数就0和1都行，这里的25%设在flex-basis已经刷了个小聪明*/
+/* 25%在父元素没有设置宽度时，就是父元素的父元素的宽度的25% */
+/* 实际情况中是有border的，所以25%其实不可行。这里把border去掉是为了验证25%完全ok */
+}
+
+.block:nth-of-type(1){
+  background: pink;
+}
+
+.block:nth-of-type(2){
+  background: greenyellow;
+}
+
+.block:nth-of-type(3){
+  background: burlywood;
+}
+
+.block:nth-of-type(4){
+  background: powderblue;
+}
+
+.block:nth-of-type(5){
+  background: paleturquoise;
+}
