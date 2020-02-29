@@ -1,0 +1,257 @@
+.first-face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second-face {
+    display: flex;
+    justify-content: space-between;
+}
+
+.second-face .pip:nth-of-type(2) {
+    align-self: flex-end;
+}
+
+.third-face {
+    display: flex;
+    justify-content: space-between;
+}
+
+.third-face .pip:nth-of-type(2) {
+    align-self: center;
+}
+
+.third-face .pip:nth-of-type(3) {
+    align-self: flex-end;
+}
+
+.fourth-face, .sixth-face {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fourth-face .column, .sixth-face .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fifth-face {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fifth-face .column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fifth-face .column:nth-of-type(2) {
+    justify-content: center;
+}
+
+/* myself flex practice */
+
+.one-1-face {
+    display: flex;
+}
+
+.one-2-face {
+    display: flex;
+    justify-content: center;
+}
+
+.one-3-face {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.one-4-face {
+    display: flex;
+    align-items: center;
+}
+
+.one-5-face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.two-1-face {
+    display: flex;
+    justify-content: space-between;
+}
+
+.two-2-face {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.two-3-face {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.two-4-face {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.two-5-face {
+    display: flex;
+}
+
+/* .two-5-face .column:first-child {
+    display: flex;
+    
+}
+.two-5-face .column:nth-of-type(2) {
+    display: flex;
+    align-items: center;
+} */
+
+.two-5-face .pip:nth-of-type(2) {
+    align-self: center;
+}
+
+.three-1-face {
+    display: flex;
+}
+
+.three-1-face .pip:nth-of-type(2) {
+    align-self: center;
+}
+
+.three-1-face .pip:nth-of-type(3) {
+    align-self: flex-end;
+}
+
+/* .four-1-face{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.four-1-face .column{
+    display: flex;
+}
+.four-1-face .column:nth-of-type(2){
+    display: flex;  
+    justify-content: flex-end;
+} */
+
+.four-1-face {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: flex-end;
+}
+
+.four-2-face {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.four-2-face .column {
+    display: flex;
+    justify-content: space-between;
+}
+
+.six-1-face {
+    display: flex;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+.six-2-face {
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* .six-3-face {
+    display: flex;
+    flex-direction: column;
+}
+
+.six-3-face .row:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+}
+
+.six-3-face .row:nth-of-type(3) {
+    display: flex;
+    justify-content: space-between;
+} */
+
+.six-3-face {
+    display: flex;
+    flex-wrap: wrap;
+}
+.six-3-face .row{
+    flex-basis: 100%;
+    display: flex;
+}
+
+.six-3-face .row:nth-of-type(2) {
+    justify-content: center;
+}
+
+.six-3-face .row:nth-of-type(3) {
+    justify-content: space-between;
+}
+
+
+
+/* OTHER STYLES */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: center;
+    flex-wrap: wrap;
+    align-content: center;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(top, #222, #333);
+}
+
+[class$="face"] {
+    margin: 16px;
+    padding: 4px;
+    background-color: #e7e7e7;
+    width: 104px;
+    height: 104px;
+    object-fit: contain;
+    box-shadow: inset 0 5px white, inset 0 -5px #bbb, inset 5px 0 #d7d7d7, inset -5px 0 #d7d7d7;
+    border-radius: 10%;
+}
+
+.pip {
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    margin: 4px;
+    background-color: #333;
+    box-shadow: inset 0 3px #111, inset 0 -3px #555;
+}
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
