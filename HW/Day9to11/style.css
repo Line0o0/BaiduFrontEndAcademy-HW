@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 /************************第一板块：头部******************************/
 
 .header {
@@ -35,7 +36,7 @@
 /* 用margin会使得header整体上移，为什么？ */
 
 .mid-text {
-    width: 50%;
+    width: 55%;
     max-width: 900px;
     margin: 30px auto;
     color: #aaaaaa;
@@ -75,7 +76,7 @@
     padding-top: 8px;
 }
 
-.input{
+.input {
     /* display: inline-block; */
     /* margin:10px; inline元素margin在垂直方向是无效的 */
     /* padding:17px; */
@@ -87,26 +88,25 @@
     /* 使用flex可以方便的实现自适应 这是inline-block做不到的 */
 }
 
-.input input:nth-of-type(1){
+.input input:nth-of-type(1) {
     height: 30px;
     padding-left: 5px;
     padding-right: 10px;
-    margin-right:5% ;
+    margin-right: 5%;
     flex: 0 1 auto;
     overflow: hidden;
     /* 因为input里面有文字，文字会占固定长度影响自适应，所以需要设置overflow */
 }
 
-.input input:nth-of-type(2){
+.input input:nth-of-type(2) {
     height: 30px;
     padding-left: 5px;
-    margin-right:5%;
+    margin-right: 5%;
     flex: 0 1 auto;
     overflow: hidden;
 }
 
-
-.input button{
+.input button {
     height: 31px;
     padding-left: 0px;
     padding-right: 0px;
@@ -117,29 +117,31 @@
 
 /**************************第二板块***************************/
 
-.first{
+.first {
     height: 600px;
-    width:100%;
+    width: 100%;
     /* border: 1px red solid; */
 }
 
-.little{
+.little {
     margin-top: 40px;
     margin-bottom: 30px;
     text-align: center;
     font-size: 12px;
 }
 
-.ready{
+.ready {
     font-size: 30px;
     width: 500px;
-    margin: 0 auto 70px auto;/* 使盒子居中*/
-    text-align: center;/* 使文字在盒子里居中*/
+    margin: 0 auto 70px auto;
+    /* 使盒子居中*/
+    text-align: center;
+    /* 使文字在盒子里居中*/
 }
 
-.four-items{
+.four-items {
     display: flex;
-    width: 100%;
+    width: 90%;
     max-width: 900px;
     height: 60%;
     flex-wrap: wrap;
@@ -147,8 +149,7 @@
     /* border: 1px black solid; */
 }
 
-
-.item{
+.item {
     display: flex;
     width: 45%;
     align-items: start;
@@ -157,77 +158,80 @@
 }
 
 /* img是inline-block */
+
 /* 因为图片的宽高肯定是会不一样的，所以给图片外面套一层固定宽度的div可以避免
 不同图片的宽度影响文字的缩进 */
-.item-left{
+
+.item-left {
     margin-right: 30px;
     width: 100px;
 }
 
-
-.item-head{
+.item-head {
     font-weight: bold;
     padding-bottom: 10px;
 }
 
+/************************ 第三部分  ***************************/
 
-/************************第三部分  ***************************/
-
-.car{
+.car {
     background-image: url("images/pic_18.png");
     height: 800px;
     background-size: 100% 100%;
 }
 
-.support{
+.support {
     text-align: center;
     font-size: 29px;
     color: aliceblue;
     padding-top: 230px;
 }
 
-.mess{
+.mess {
     font-size: 18px;
     color: aliceblue;
     width: 50%;
-    margin:50px auto;
+    margin: 50px auto;
     text-align: center;
 }
 
-.two-button{
+.two-button {
     display: flex;
     justify-content: center;
 }
+
 /* 因为是inline-block元素，所以两个会贴在一起，需要用margin来分开 */
 
-.two-button button{
+.two-button button {
     height: 50px;
-    padding-left:15px;
-    padding-right:15px;
+    padding-left: 15px;
+    padding-right: 15px;
     overflow: hidden;
 }
 
-.two-button button:nth-of-type(2){
+.two-button button:nth-of-type(2) {
     margin-left: 50px;
 }
 
-/* 第四部分 */
+/****************************** 第四部分 *********************************/
 
-.product{
+.product {
     /* height:450px; */
     /* 不设具体高度，使被压缩的时候下border会跟着文字往下浮动 */
     padding-bottom: 70px;
     border-bottom: 1px #cccccc solid;
+    padding-top:50px ;
+    padding-bottom: 120px;
 }
 
-.try{
+.try {
     text-align: center;
     font-size: 29px;
     margin-top: 50px;
     margin-bottom: 70px;
 }
 
-.three-columns{
+.three-columns {
     display: flex;
     justify-content: space-around;
     width: 100%;
@@ -235,47 +239,215 @@
     margin: 0 auto;
 }
 
-.column{
+.column {
     width: 28%;
     text-align: center;
     font-size: 14px;
 }
 
-.column img{
+.column img {
     margin-bottom: 20px;
 }
 
-.column-text{
+.column-text {
     overflow: hidden;
 }
 
-/* 第五部分 */
-.business{
-    height: 700px;
+/***************************** 第五部分 **************************/
+
+.business {
+    /* height: 600px; */
+    /* 同样不设具体高度，使得挤压时不会越界溢出，同时又用padding可以控制上下边距 */
+    border-bottom: 1px #cccccc solid;
+    font-family: "Microsoft Yahei Light";
+    overflow: visible;
+    padding-top:120px;
+    padding-bottom: 120px;
 }
 
-.business-row{
+.business-row {
     display: flex;
     justify-content: space-around;
-    width: 95%;
+    align-items: center;
+    width: 90%;
+    /* 给两周留有边距 */
     max-width: 900px;
-    margin:0 auto;
+    margin: 0px auto 0 auto;
 }
 
-.business-img img{
+.business-row:nth-of-type(2) {
+    margin-top: 50px;
+}
+
+.business-row img {
     width: 350px;
 }
 
-.img-text{
+.img-text {
     width: 45%;
 }
 
-.img-text .img-text-head{
+.img-text .img-text-head {
     font-weight: bold;
-    font-size: 15px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: center;
 }
+
 /* 文字要水平垂直居中 */
 
-.img-text .img-text-content{
+.img-text .img-text-content {
+    font-size: 15px;
+    text-align: center;
+}
 
+/**************************** 第六部分 *******************************/
+
+.crew {
+    /* height: 900px; */
+    border-bottom: 1px #cccccc solid;
+    padding-bottom: 100px;
+}
+
+.awesome {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 100px;
+    font-family: "Microsoft Yahei Light";
+}
+
+/* div里面只装文字的还是可以用margin调整上面距离的,height和weight都不是必须的 */
+
+.unique {
+    width: 50%;
+    max-width: 600px;
+    text-align: center;
+    margin: 30px auto 30px auto;
+    font-family: "Microsoft Yahei Light";
+}
+
+.pic-wall {
+    width: 80%;
+    max-width: 900px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.pic-wall img {
+    width: 48%;
+    margin-bottom: 30px;
+}
+
+.pic-wall img:nth-of-type(1), .pic-wall img:nth-of-type(3) {
+    margin-right: 15px;
+}
+
+/* 为了使图片自动缩放 设置百分比宽度是最方便的，也不需要去设置flex:0 1 */
+
+/*********************** 第六部分 ***********************/
+
+.contact {
+    height: 700px;
+}
+
+.contact-content{
+    width: 80%;
+    max-width: 900px;
+    margin: 120px auto 50px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.form {
+    width: 50%;
+    margin-right: 40px;
+    border: 1px #aaaaaa solid;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.form-head {
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.form input {
+    width: 65%;
+    height: 30px;
+    margin-bottom: 25px;
+    padding-left: 5px;
+    font-family: "Microsoft Yahei Light";
+}
+
+.form textarea {
+    width: 65%;
+    height: 130px;
+    margin-bottom: 25px;
+    padding-left: 5px;
+    font-family: "Microsoft Yahei Light";
+}
+
+.form button {
+    width: 60%;
+    height: 40px;
+    background: #000;
+    color: aliceblue;
+    margin-bottom: 40px;
+}
+
+.side-info {
+    width: 30%;
+    align-self: start;
+    margin-top: 80px;
+    font-family: "Microsoft Yahei Light";
+}
+.side-head{
+    /* font-weight: bold; */
+    font-size: 28px;
+    line-height: 3;
+}
+
+.side-text{
+    font-size: 15px;
+}
+
+/*************************Footer 部分 ***********************/
+
+footer {
+    height: 380px;
+    background: #000;
+}
+
+.foot-content{
+    width: 100%;
+    max-width: 900px;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.finger{
+    /* background: goldenrod; */
+    width: 150px;
+    height: 200px;
+    color: #cccccc;
+    font-family: "Microsoft Yahei Light";
+    text-align: center;
+    line-height: 2.5;
+    font-size: 12px;
+    margin-top: 100px;
+}
+
+.finger-head{
+    font-weight: bold;
+    font-size: 16px;
+    color: aliceblue;
 }
