@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>IFE JavaScript Task 01</title>
+    <style>#aqi-list ol {
+            /* list-style-type: none; */
+        }
+
+        #aqi-list li {
+            line-height: 2;
+            list-style-type: none
+                /* 是加在item的 */
+        }</style>
+</head>
+
+<body>
+
+    <h3>污染城市列表</h3>
+    <ol id="aqi-list">
+        <!--   
+    <li>第一名：福州（样例），10</li>
+    <li>第二名：福州（样例），10</li> -->
+    </ol>
+
+    <script>function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+var aqiData = [["北京", 90], ["上海", 50], ["福州", 10], ["广州", 50], ["成都", 90], ["西安", 100]];
+var order = new Map();
+order.set('0', '第一名');
+order.set('1', '第二名');
+order.set('2', '第三名');
+order.set('3', '第四名');
+order.set('4', '第五名');
+order.set('5', '第六名');
+console.log(order.get(1));
+var orderlist = ['第一名', '第二名', '第三名', '第四名', '第五名', '第六名']; //此处前面order定义遇到这种立即执行的函数一定要加分号，不然会解析误解
+
+(function () {
+  /*
+  在注释下方编写代码
+  遍历读取aqiData中各个城市的数据
+  将空气质量指数大于60的城市显示到aqi-list的列表中
+  */
+  var sortedArray = aqiData.sort(sortMethod);
+  var list = document.getElementById('aqi-list');
+  var html = "";
+
+  for (var i in aqiData) {
+    console.log(i); //对数组是循环出索引
+
+    console.log(_typeof(i)); //因为i是string类型，所以Map定义key也要为string类型的数字，本身key为数值类型是没问题的
+
+    html += "<li>" + order.get(i) + " " + aqiData[i][0] + ":" + aqiData[i][1] + "</li>";
+  }
+
+  list.innerHTML += html;
+})();
+
+function sortMethod(x, y) {
+  return x[1] - y[1]; //使用第二个值，即空气质量进行排序
+}</script>
+</body>
+
+</html>
