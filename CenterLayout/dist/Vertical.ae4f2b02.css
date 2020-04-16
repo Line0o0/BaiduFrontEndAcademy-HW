@@ -1,0 +1,40 @@
+.wrap {
+    width: 200px;
+    height: 300px;
+    border: 2px solid #ccc;
+}
+
+/* 行内元素 */
+
+.span {
+    background: red;
+}
+
+.line-height {
+    line-height: 300px;
+}
+
+/* 不定高的块级元素 */
+
+.non-height-parent {
+    display: table-cell;
+    /* 因为 vertical-align 用来指定行内元素（inline）或表格单元格（table-cell）元素的垂直对齐方式。 */
+    vertical-align: middle;
+}
+
+.non-height {
+    background: green;
+}
+
+/* 定高的块级元素 */
+
+/* 用margin计算高度即可 */
+
+.height {
+    width: 100px;
+    height: 100px;
+    margin-top: 100px;
+    background: darkblue;
+}
+
+/*# sourceMappingURL=/Vertical.ae4f2b02.css.map */

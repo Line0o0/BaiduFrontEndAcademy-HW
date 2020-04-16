@@ -24,13 +24,14 @@
             获取aqi-input输入的值，并显示在aqi-display中
             */
             var inp = document.getElementById('aqi-input').value;
-            console.log(typeof (inp));
+            console.log(typeof (inp));//string
             console.log(inp);
             var content = document.getElementById('aqi-display')
             if (inp.length === 0) {
                 content.innerHTML = "请输入值"
             }
             else if (!isNaN(inp)) {//isNaN() 函数用于检查其参数是否有非数字值。
+                //isNaN会将传入的参数转为Number类型，如果传入参数转化Number会变成NaN，如"123ABC"，那就会返回true
                 content.innerHTML = inp;
             }
             else {

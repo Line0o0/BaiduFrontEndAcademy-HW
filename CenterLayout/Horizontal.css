@@ -1,0 +1,93 @@
+.wrap1 {
+    background: pink;
+}
+
+.wrap2 {
+    background: aquamarine;
+}
+
+/* 下面不设置child的宽度，此时child这个div属于行内元素 */
+
+.parent1 {}
+
+/* 这里parent的宽度是接近页面的100% 但是为什么子元素就必须是内容撑开宽度呢 */
+
+/* 查父子元素的默认宽度和高度 */
+
+.child1 {
+    display: table;
+    height: 30px;
+    /* 为什么table会有效？原理是什么 */
+    margin: 0 auto;
+}
+
+.parent2 {
+    /* 父元素会变得跟子元素一样小 */
+    width: -moz-fit-content;
+    width: -webkit-fit-content;
+    width: fit-content;
+    /* 但是高度为0*/
+    /* CSS3新属性 */
+    margin: 0 auto;
+    /* 让父元素水平居中 */
+}
+
+.child2 {
+    float: left;
+}
+
+.parent3 {
+    /* position: relative; */
+    /* 可加可不加 */
+    /* 但是高度为0*/
+}
+
+.child3 {
+    /* 位置会比2中右偏一些 */
+    position: absolute;
+    left: 50%;
+    transform: translate(50%, 0);
+}
+
+/* 下面开始子元素宽度固定 child为定宽的块级元素 */
+
+.parent4 {
+    position: relative;
+}
+
+.child4 {
+    position: absolute;
+    left: 50%;
+    /* 这一步是会生效的 */
+    width: 50px;
+    /* 为什么必须设置宽度？设置了宽度才能下面使得margin可以计算 */
+    margin-left: -0.5*50px;
+}
+
+.child4-2 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 50px;
+    /* 为什么设置宽度？设置了宽度才能auto？自动帮你填充margin？ */
+    margin: 0 auto;
+}
+
+/* 下面为不定宽度的块级元素 因为不知道有多少个页面 所以不能定宽来限制弹性 */
+
+.container {
+    text-align: center;
+    background: beige
+}
+
+.container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    /* display: inline-block; */
+}
+
+.container li {
+    margin-right: 8px;
+    display: inline-block;
+}

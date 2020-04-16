@@ -2,63 +2,71 @@
     padding: 15px 20px;
     border: 1px dashed #ff6c60;
 }
+
 .left {
-    width: 120px;/* 已经固定好宽度*/
+    width: 120px;
+    /* 已经固定好宽度*/
     border: 5px solid #ddd;
 }
+
 .right {
     margin-left: 20px;
     border: 5px solid #ddd;
 }
 
-
-
 /* 双inline-box  calc*/
+
 .wrapper-inline-block {
     /* box-sizing: content-box; */
-    font-size: 0; /*父容器字体大小设0，消除div之间的空格，宽度才精确*/  
+    font-size: 0;
+    /*父容器字体大小设0，消除div之间的空格，宽度才精确*/
 }
 
-.wrapper-inline-block .left,
-.wrapper-inline-block .right {
-    display: inline-block;/*注意这个是加在想让他们共一行的元素里面*/
-    vertical-align: top; /*vertical-align是行内元素用来指定自己的对齐方式，故要在子元素这里设置，不同行内元素对齐方式可以不同*/
+.wrapper-inline-block .left, .wrapper-inline-block .right {
+    display: inline-block;
+    /*注意这个是加在想让他们共一行的元素里面*/
+    vertical-align: top;
+    /*vertical-align是行内元素用来指定自己的对齐方式，故要在子元素这里设置，不同行内元素对齐方式可以不同*/
     font-size: 14px;
-    box-sizing: border-box;/*这样才能精确calc宽度，甚至包含了border*/
+    box-sizing: border-box;
+    /*这样才能精确calc宽度，甚至包含了border*/
 }
 
 .wrapper-inline-block .right {
-    width: calc(100% - 140px);/* 写成100%-140px就会失效 */
+    width: calc(100% - 140px);
+    /* 写成100%-140px就会失效 */
 }
-
 
 /* 双float calc */
 
 .wrapper-double-float {
-    overflow: auto;        /*父元素里面用overflow清除浮动*/
+    overflow: auto;
+    /*父元素里面用overflow清除浮动*/
     /* box-sizing: content-box; */
 }
 
-.wrapper-double-float .left,
-.wrapper-double-float .right {
-    float: left;/* float本来就是紧贴的，在同一行，所以无需inline-block;，自然也就少了顶端对齐，空格字符占空间等问题。*/
-    box-sizing: border-box;    /*前面设置的margin-left还是生效的*/
+.wrapper-double-float .left, .wrapper-double-float .right {
+    float: left;
+    /* float本来就是紧贴的，在同一行，所以无需inline-block;，自然也就少了顶端对齐，空格字符占空间等问题。*/
+    box-sizing: border-box;
+    /*前面设置的margin-left还是生效的*/
 }
 
 .wrapper-double-float .right {
     width: calc(100% - 140px);
 }
 
-
-
 /* float+margin-left */
+
 /* block级别的元素盒子的宽度具有填满父容器，并随着父容器的宽度自适应的流动特性。 */
+
 .wrapper-float {
-    overflow: hidden;       
+    overflow: hidden;
 }
 
 .wrapper-float .left {
     float: left;
+    /* margin-right: 0px; */
 }
 
 .wrapper-float .right {
@@ -67,116 +75,118 @@
     /* 是会占满父元素的，除非显式规定了宽高 */
 }
 
-
-
 /* 使用absolute+margin-left方法 */
+
 /* 好像没有清除浮动的方法 */
+
 /*左比右高 出现坍陷*/
+
 /*不够优雅*/
 
-.wrapper-absolute{
+.wrapper-absolute {
     /* overflow: hidden; */
     /* overflow: hidden不起作用，能不能从BFC去解释 */
-    /* min-height: 200px;  */ 
+    /* min-height: 200px;  */
     /* 索性给父元素规定一个最小高度，防止左比右高坍陷 */
 }
 
 .wrapper-absolute .left {
     position: absolute;
+    /* margin-right: 120px; */
 }
 
 .wrapper-absolute .right {
     margin-left: 150px;
 }
 
-
 /* float+overflow BFC */
+
 /* 此处要形成大块罩小块，因为形成了大块了，是对外面没影响了
 但是里面还是乱的，所以里面要形成小块才能家里和谐 */
+
 .wrapper-float-bfc {
     overflow: auto;
 }
 
 .wrapper-float-bfc .left {
-    float: left;/* 用float其实是使其固定在左边 */
-    margin-right: 20px;/*给float元素加margin是最简单的，若给right加需要很大的数值：即要150px*/
+    float: left;
+    /* 用float其实是使其固定在左边 */
+    margin-right: 20px;
+    /*给float元素加margin是最简单的，若给right加需要很大的数值：即要150px*/
 }
 
 .wrapper-float-bfc .right {
-    margin-left: 0;/* margin右边来设不起作用？*/
-    overflow: auto;/*右边是一个独立的BFC,就不会受浮动影响了*/
+    margin-left: 0;
+    /* margin右边来设不起作用？*/
+    overflow: auto;
+    /*右边是一个独立的BFC,就不会受浮动影响了*/
     /* margin-left: 150px; */
     /*flow-root?*/
 }
 
-
-
 /* float+display:flow-root BFC 无副作用 但是好像有坑*/
+
 /* flow-root可理解为作用和overflow一样都是用来生成BFC的
 只不过不会产生像滚动条这样的副作用 */
-.wrapper-flowroot-bfc{
+
+.wrapper-flowroot-bfc {
     display: flow-root;
 }
 
-.wrapper-flowroot-bfc .left{
+.wrapper-flowroot-bfc .left {
     float: left;
 }
 
-.wrapper-flowroot-bfc .right{
+.wrapper-flowroot-bfc .right {
     /* display: flow-root; */
     /* 为什么这里可加可不加 但是下面的.side却不加不行？ */
 }
 
-.box{
+.box {
     background-color: rgb(224, 206, 247);
     border: 5px solid rebeccapurple;
     display: flow-root;
 }
 
-.float{
+.float {
     float: left;
     width: 200px;
     height: 150px;
     background-color: white;
-    border:1px solid black;
+    border: 1px solid black;
     padding: 10px;
-}    
+}
 
-.side{
+.side {
     border: 5px red solid;
     display: flow-root;
     /* vertical-align: bottom;因为不是行内元素 所以此处设置不起作用 */
 }
 
-
-
-
 /*flex 最好的方案*/
-.wrapper-flex{
-    display:flex;
+
+.wrapper-flex {
+    display: flex;
     align-items: flex-start;
 }
 
-.wrapper-flex .left{
-    flex:0 0 auto;
+.wrapper-flex .left {
+    flex: 0 0 auto;
 }
 
-.wrapper-flex .right{
-    flex:1 1 auto;
+.wrapper-flex .right {
+    flex: 1 1 auto;
 }
-
-
-
 
 /* 新型的布局方式,可以满足需求，但这并不是它发挥用处的真正地方 */
+
 .wrapper-grid {
     display: grid;
     grid-template-columns: 120px 1fr;
     align-items: start;
 }
 
-.wrapper-grid .left,
-.wrapper-grid .right {
+.wrapper-grid .left, .wrapper-grid .right {
     box-sizing: border-box;
 }
 
@@ -187,4 +197,3 @@
 .wrapper-grid .right {
     grid-column: 2;
 }
-

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- HTML结构 -->
+    <ul id="test-list">
+        <li>JavaScript</li>
+        <li>Swift</li>
+        <li>HTML</li>
+        <li>ANSI C</li>
+        <li>CSS</li>
+        <li>DirectX</li>
+    </ul>
+    <script>
+        // parent = document.getElementById('test-list')
+        // for (i of [...parent.children]) {
+        //     console.log(i.innerText);
+        //     if (i.innerText != "JavaScript" && i.innerText != "HTML" && i.innerText != "CSS") {
+        //         parent.removeChild(i)
+        //     }
+        // }
+
+        var myList = document.getElementById('test-list'),
+
+            myChildren = Array.from(myList.children);
+
+        myChildren.forEach((element, index, array) => {
+
+            if (!['JavaScript', 'HTML', 'CSS'].includes(element.innerText)) {
+
+                myList.removeChild(element);
+
+            }
+
+        });
+
+    </script>
+</body>
+
+</html>

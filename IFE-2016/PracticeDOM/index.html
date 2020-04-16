@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Practice</title>
+</head>
+
+<body>
+    <!-- HTML结构 -->
+    <ol id="test-list">
+        <li class="lang">Scheme</li>
+        <li class="lang">JavaScript</li>
+        <li class="lang">Python</li>
+        <li class="lang">Ruby</li>
+        <li class="lang">Haskell</li>
+    </ol>
+    <script>
+        // sort list:
+        //Solution 1:
+        // var list = document.getElementById('test-list')
+        // var myChildrenArray = Array.from(list.children)
+        // for (i in myChildrenArray) {
+        //     console.log(i);//0 1 2 3 4 for..in只是循环属性名（索引）
+        // }
+        // for (i of myChildrenArray) {
+        //     console.log(i);//<li class="lang">Haskell</li> and so on  for..of才是真正循环里面的元素
+        // }
+        // myChildrenArray.sort(//在原数组上修改，不会返回一个新的数组、
+
+        //     function (x, y) {
+        //         // return x.textContent > y.textContent ? 1 : -1;//就是个三元运算符罢了
+        //         return x.textContent - y.textContent
+        //     }
+        // )
+
+        // myChildrenArray.forEach((element, index, array) => {
+        //     console.log(element);
+        //     list.appendChild(element);//myChildrenArray转过一遍Array类型了，这里list居然还认得出来...
+        // })
+
+
+        //Solution 2:
+        var children_arr = [...document.getElementById('test-list').children]//虽然转成了数组，但是修改这个数组仍然能够修改html内容
+
+        var sorted = children_arr.map(x => x.innerText).sort();//map已经产生一个新数组，这里callback是一个箭头函数
+
+        children_arr.map((x, i) => { x.innerText = sorted[i]; })//map两个参数x,i分别对应的是element和index
+
+
+    </script>
+</body>
+
+</html>

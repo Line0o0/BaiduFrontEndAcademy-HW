@@ -1,84 +1,91 @@
-.wrapper{   
+.wrapper {
     border: 5px gold solid;
 }
 
-.left{
-    width:30%;
+.left {
+    width: 30%;
     border: 5px greenyellow solid;
     padding: 20px;
 }
 
-.right{
+.right {
     width: 70%;
     border: 5px pink solid;
     padding: 20px;
 }
 
 /* flex */
-.wrapper .flex{
+
+.wrapper .flex {
     display: flex;
+    align-items: flex-start;
 }
 
-/* inline-block */
-.inline-block{
+.flex .left {
+    flex: 0 0 auto;
+}
+
+.flex .right {
+    flex: 1 1 auto;
+}
+
+/* 双inline-block */
+
+.inline-block {
     font-size: 0;
 }
 
-.inline-block .right,
-.inline-block .left{
+.inline-block .right, .inline-block .left {
     display: inline-block;
     font-size: 14px;
     box-sizing: border-box;
     /* 因为inline-block时，前面的30%，70%是content-box */
 }
 
-/* float */
-.float{
+/* 双float */
+
+.float {
     overflow: hidden;
 }
 
-.float .right,
-.float .left{
+.float .right, .float .left {
     float: left;
     box-sizing: border-box;
 }
 
-
 /* float+margin-left */
-.float-margin-left{
+
+.float-margin-left {
     overflow: hidden;
 }
 
-.float-margin-left .left{
+.float-margin-left .left {
     float: left;
     box-sizing: border-box;
     margin-right: 0%;
+    /* 如果设置为30%是会把右边的文字挤开的 */
 }
 
-.float-margin-left .right{
+.float-margin-left .right {
     margin-left: 31%;
     /* 用maigin-left在两者同一行不够放的时候是不会挤下第二行的，而是重叠 */
     /* box-sizing: border-box; 这句不必加，因为已经把100-31%的空间给了右边盒子了*/
-
 }
 
 /* float +BFC */
-.float-bfc{
+
+.float-bfc {
     display: flow-root;
 }
 
-.float-bfc .left{
+.float-bfc .left {
     float: left;
     box-sizing: border-box;
 }
 
-.float-bfc .right{
+.float-bfc .right {
     display: flow-root;
     box-sizing: border-box;
 }
-
-
-
-
 
 /*# sourceMappingURL=/style.e308ff8e.css.map */

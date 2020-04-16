@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE utf-8>
 <html>
 
 <head>
@@ -32,6 +32,9 @@
      -->
 
     </ul>
+    <ol id="resort2">
+
+    </ol>
 
     <button id="sort-btn">排序</button>
 
@@ -85,13 +88,18 @@
          */
         function render(data) {
             order = ['一', '二', '三', '四', '五', '六', '七', '八']
-            resort = document.getElementById('resort')
+
             html = ''
             for (i in data) {
                 html += "<li>第" + order[i] + "名: " + data[i][0] + " " + data[i][1] + "</li>";
             }
+            resort = document.getElementById('resort')
             resort.innerHTML += html;
-            document.getElementById('resort').setAttribute("class", "list-item")
+            // resort2 = document.getElementById('resort2')
+            // resort2.innerHTML += html;
+            // document.getElementById('resort').setAttribute("class", "list-item")
+            document.getElementById('resort').style.listStyleType = "none"
+            // document.getElementById('resort2').style.listStyleType = "none"
             //这里是给ul加list-line-style吗？不应该加在li才会生效吗？
         }
 

@@ -1,0 +1,95 @@
+img {
+    height: 10%;
+    width: 10%;
+}
+
+img:hover {
+    height: 50%;
+    width: 50%;
+}
+
+/* img {
+    transition: 1s;
+    transition: 1s height;
+    缩放不了了 
+}*/
+
+img {
+    transition: 1s height, 1s 1s width;
+    /* 并不能实现延迟 */
+}
+
+img {
+    transition: 1s ease;
+}
+
+/* img {
+    transition: 1s height cubic-bezier(.83, .97, .05, 1.44);
+} */
+
+div {
+    margin-top: 50px;
+    text-align: center;
+    -webkit-animation: spin 1s linear infinite;
+    animation: spin 1s linear infinite;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;
+}
+
+div:hover {
+    animation: 1s rainbow infinite;
+    -webkit-animation: 1s rainbow infinite;
+    /* 默认情况下，动画只播放一次。加入infinite关键字，可以让动画无限次播放。 */
+    /* -webkit-animation: 2s yellowGreen 3 alternate forwards;
+    animation: 2s yellowGreen 3 alternate forwards; */
+    /* 播放三次 停在最后一帧*/
+    -webkit-animation-play-state: running;
+    animation-play-state: running;
+    /* 做不到移开停止恢复 */
+}
+
+/* 用keyframes关键字，定义rainbow效果。 */
+
+@keyframes rainbow {
+    0% {
+        background: #c00;
+    }
+    50% {
+        background: orange;
+    }
+    100% {
+        background: yellowgreen;
+    }
+}
+
+@-webkit-keyframes rainbow {
+    0% {
+        background: #c00;
+    }
+    50% {
+        background: orange;
+    }
+    100% {
+        background: yellowgreen;
+    }
+}
+
+@keyframes yellowGreen {
+    0% {
+        background: blueviolet;
+    }
+    100% {
+        background: yellowgreen;
+    }
+}
+
+@-webkit-keyframes yellowGreen {
+    0% {
+        background: blueviolet;
+    }
+    100% {
+        background: yellowgreen;
+    }
+}
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */

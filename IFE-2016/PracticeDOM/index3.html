@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="hidden" name="nihao" value="buhao">
+    <!-- 上面是隐藏表单，就是在页面中看不见的，防御CSRF的token放在这里 -->
+    <input type="password" name="nihao" value="buhao">
+    <label><input type="radio" name="weekday" id="monday" value="1" onclick="change()"> Monday</label>
+    <label><input type="radio" name="weekday" id="tuesday" value="2" onclick="change()"> Tuesday</label>
+    <script>
+        var mon = document.getElementById('monday');
+        var tue = document.getElementById('tuesday');
+        console.log(mon.value);  // '1'
+        console.log(tue.value); // '2'
+        function change() {
+            console.log(mon.checked); // true或者false
+            console.log(tue.checked); // true或者false
+        }
+
+    </script>
+
+    <!-- HTML -->
+    <form id="login-form" method="post" onsubmit="return checkForm()">
+        <input type="text" id="username" name="username">
+        <input type="password" id="password" name="password">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function checkForm() {
+            var pwd = document.getElementById('password');
+            // 把用户输入的明文变为MD5:
+            pwd.value = toMD5(pwd.value);
+            // 继续下一步:
+            return true;
+        }
+    </script>
+
+    <!-- HTML -->
+    <form id="login-form" method="post" onsubmit="return checkForm()">
+        <input type="text" id="username" name="username">
+        <input type="password" id="password" name="password">
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        function checkForm() {
+            var pwd = document.getElementById('password');
+            // 把用户输入的明文变为MD5:
+            pwd.value = toMD5(pwd.value);
+            // 继续下一步:
+            return true;
+        }
+    </script>
+</body>
+
+</html>
