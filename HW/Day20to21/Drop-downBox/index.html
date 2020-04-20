@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Drop-Down-Box</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="index.js"></script>
+</head>
+
+<body>
+    <!-- input的name属性是来区分是不是同一个单选框的 -->
+    <div id='radio'>
+        <label>
+            <input id="school" name="status" type="radio">
+            School
+        </label>
+        <label>
+            <input id="company" name="status" type="radio">
+            Company
+        </label>
+        <label>
+            <input id="sex" name="status" type="radio">
+            Sex
+        </label>
+    </div>
+
+    <select id="school-select">
+        <option>北京邮电大学</option>
+        <option>黑龙江大学</option>
+        <option>华中科技大学</option>
+    </select>
+
+    <select id="company-select">
+        <option>百度</option>
+        <option>爱奇艺</option>
+    </select>
+
+    <select id="sex-select">
+        <option>Male</option>
+        <option>Female</option>
+    </select>
+</body>
+
+</html>

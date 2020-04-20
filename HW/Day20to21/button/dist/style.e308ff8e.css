@@ -1,0 +1,32 @@
+.style1 {
+    margin: 10px auto;
+    background-color: #9999FF;
+    display: block;
+    color: White;
+    border: 1px solid white;
+    padding: 10px 25px;
+    font-size: 18px;
+}
+
+.style1:hover {
+    background-color: #66B3FF;
+    cursor: pointer;
+}
+
+.style2 {
+    margin: 10px auto;
+    background-color: gray;
+    display: block;
+    color: black;
+    border: 1px solid white;
+    padding: 10px 25px;
+    font-size: 18px;
+}
+
+.style2:hover {
+    background-color: black;
+    color: White;
+    cursor: pointer
+}
+
+/*# sourceMappingURL=/style.e308ff8e.css.map */
